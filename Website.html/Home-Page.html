@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venice Tourist Tax</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #fafafa;
+            font-family: 'Arial', sans-serif;
+            color: #333; /* Text color */
+        }
+
+        .navbar {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .jumbotron {
+            background: url('venice.jpg') center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px;
+            margin-bottom: 0;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Venice Tourist Tax</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="User-List.html">User List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Add-User.html">Add User</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Jumbotron - Welcome Section -->
+    <div class="jumbotron">
+        <h1 class="display-4" style="color: #fff;">Welcome to Venice Tourist Tax</h1>
+        <p class="lead" style="color: #fff;">Explore the beauty of Venice while managing tourist taxes efficiently.</p>
+    </div>
+
+    <!-- Tax Overview Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2>Tax Overview</h2>
+                <p>In Venice, tourists are charged a tourist tax for each night of their stay. However, there is a maximum
+                    charge for stays longer than five days. After five days, each additional day is free of charge.</p>
+                <h4>Pricing Options:</h4>
+                <ul>
+                    <li>EU Citizens: €2.50 per night</li>
+                    <li>Non-EU Citizens: €5.00 per night</li>
+                    <li>Children under 18: Free</li>
+                    <li>Italian Citizens: Free</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Login</h5>
+                        <p class="card-text">Log in to access your account and manage tourist taxes.</p>
+                        <a href="login.html" class="btn btn-primary">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">User List</h5>
+                        <p class="card-text">View the list of registered users and their details.</p>
+                        <a href="User-List.html" class="btn btn-primary">View User List</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Add User</h5>
+                        <p class="card-text">Register a new user to manage their tourist taxes.</p>
+                        <a href="Add-User.html" class="btn btn-primary">Register User</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
