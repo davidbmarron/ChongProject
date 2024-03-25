@@ -68,7 +68,7 @@ if (isset($_SESSION['user'])) {
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="booking.php">Venice Tourist Tax</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -77,17 +77,32 @@ if (isset($_SESSION['user'])) {
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="authenticate.php">Login</a> <!-- Changed this to an anchor element -->
+                <li class="nav-item">
+                    <a class="nav-link" href="booking.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="authenticate.php">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="booking.php">Bookings</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="User-List.php">User List</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Booking.php">Bookings</a>
+                    <a class="nav-link" href="Add-User.php">Add User</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Add-User.html">Add User</a>
+                    <a class="nav-link" href="payment-management.php">Payment Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reports.php">Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exemption.php">Exemptions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="QRCode.php">QRCode</a>
                 </li>
             </ul>
         </div>

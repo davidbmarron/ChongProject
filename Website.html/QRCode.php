@@ -13,16 +13,15 @@ $result = null;
 
 // Check if UserID is set in the session
 if (isset($_SESSION['user'])) {
-	$user = $_SESSION['user'];
+    $user = $_SESSION['user'];
     $userID = $user->userid;
-	
-	//print_r($_SESSION['user']);
 
     // Modify the SQL query to select bookings associated with the logged-in user's UserID
-    $query = "SELECT BookingID, UserID, NumberOfAdults, NumberOfChildren, DateOfVisit, TimeOfVisit 
-              FROM booking 
-              WHERE UserID = $userID";
-	//echo $query;
+    $query = "SELECT q.QRCodeID
+            FROM qrcode q
+            JOIN Users u ON q.UserID = u.UserID
+            WHERE u.UserID = '$userID'";
+    // corrected variable name and removed single quotes
     $result = $conn->query($query);
     if (!$result) die($conn->error);
 } else {
@@ -109,27 +108,36 @@ if (isset($_SESSION['user'])) {
         </div>
     </nav>
 
-	    <!-- Jumbotron - Welcome Section -->
+    <!-- Jumbotron - Welcome Section -->
     <div class="jumbotron">
         <h1 class="display-4" style="color: #fff;">Welcome to Venice Tourist Tax Website</h1>
-        <p class="lead" style="color: #fff;">Explore the beauty of Venice while managing tourist taxes efficiently.</
-    </p>
+        <p class="lead" style="color: #fff;">Explore the beauty of Venice while managing tourist taxes efficiently.</p>
     </div>
 
+    <h2>Your QR CodeID:</h2>
+<ul>
+    <?php
+    // Display the QR codes associated with the logged-in user if $result is defined
+    if ($result) {
+        while ($row = $result->fetch_assoc()) {
+            $QRCodeID = $row['QRCodeID'];
+            // Generate a URL that points to a PHP script to generate the QR code image
+            $qrCodeImageUrl = "generate_qr_code.php?QRCodeID=$QRCodeID";
+            echo "<li>QRCodeID: $QRCodeID <br> <img src='$qrCodeImageUrl' alt='QR Code'></li>";
+        }
+    }
+    ?>
+	
 
-    <h2>User Bookings</h2>
+</ul>
+
     <ul>
         <?php
-        // Display the bookings associated with the logged-in user if $result is defined
+        // Display the payments associated with the logged-in user if $result is defined
         if ($result) {
             while ($row = $result->fetch_assoc()) {
-                $BookingID = $row['BookingID'];
-                $UserID = $row['UserID'];
-                $NumberOfAdults = $row['NumberOfAdults'];
-                $NumberOfChildren = $row['NumberOfChildren'];
-                $DateOfVisit = $row['DateOfVisit'];
-                $TimeOfVisit = $row['TimeOfVisit'];
-                echo "<li><a href='booking-details.php?BookingID=$BookingID'>BookingID: $BookingID | UserID: $UserID | Adults: $NumberOfAdults | Children: $NumberOfChildren | Date: $DateOfVisit | Time: $TimeOfVisit</a></li>";
+                $QRCodeID = $row['QRCodeID']; // Corrected variable name from PaymentID
+                echo "<li>QRCodeID: $QRCodeID</li>";
             }
         }
         ?>

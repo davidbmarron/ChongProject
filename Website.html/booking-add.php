@@ -68,6 +68,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="exemption.php">Exemptions</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="QRCode.php">QRCode</a>
+                </li>
             </ul>
         </div>
     </nav>
