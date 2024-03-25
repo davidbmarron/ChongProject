@@ -1,10 +1,59 @@
+<?php
+// Database connection settings
+require_once 'login.php';
+
+// Initialize variables for form data
+$fullname = $nationality = $passport = $age = $gender = '';
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize inputs
+    $exemptiontype = sanitize_input($_POST["exemptiontype"]);
+    $exemptionstartdate = sanitize_input($_POST["exemptionstartdate"]);
+    $exemptionenddate = sanitize_input($_POST["exemptionenddate"]);
+    $UserID = 1;
+    
+    // Connect to the database
+    $conn = new mysqli($hn, $un, $pw, $db);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Insert data into the database
+    $sql = "INSERT INTO exemption (UserID, Exemptiontype, Exemptionstartdate, exemptionenddate)
+            VALUES ($UserID, '$exemptiontype', '$exemptionstartdate', '$exemptionenddate')";
+
+    //echo $sql;
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<script>alert('Exemption request submitted successfully');</script>";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    // Close the database connection
+    $conn->close();
+}
+
+// Function to sanitize input data
+function sanitize_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Booking - Venice Tourist Tax</title>
+    <title>Create Exemption - Venice Tourist Tax</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -36,6 +85,7 @@
 <body>
 
     <!-- Navigation Bar -->
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">Venice Tourist Tax</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -60,29 +110,32 @@
         </div>
     </nav>
 
+
     <!-- Jumbotron - Welcome Section -->
     <div class="jumbotron">
-        <h1 class="display-4">Create Booking</h1>
+        <h1 class="display-4">Create Exemption</h1>
     </div>
 
-    <!-- Create Booking Form -->
+    <!-- Exemption Form Section -->
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <form>
+                <form method="POST" action="create_exemption.php">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        <label for="exemptiontype">Exemption Type</label>
+                        <input type="text" class="form-control" id="exemptiontype" name="exemptiontype" placeholder="exemptiontype" required>
                     </div>
                     <div class="form-group">
-                        <label for="date">Date</label>
-                        <input type="date" class="form-control" id="date">
+                        <label for="exemptionstartdate">Exemption Start Date</label>
+                        <input type="text" class="form-control" id="exemptionstartdate" name="exemptionstartdate" placeholder="Enter your exemptionstartdate" required>
                     </div>
                     <div class="form-group">
-                        <label for="visitors">Number of Visitors</label>
-                        <input type="number" class="form-control" id="visitors" min="1">
+                        <label for="exemptionenddate">Exemption End Date</label>
+                        <input type="text" class="form-control" id="exemptionenddate" name="exemptionenddate" placeholder="Enter your exemptionenddate" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                        </select>
+                    </div>
+                    <input type="submit" class="btn btn-primary">
                 </form>
             </div>
         </div>

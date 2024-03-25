@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Exemption - Venice Tourist Tax</title>
+    <title>Booking Management - Venice Tourist Tax</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -30,6 +30,10 @@
             padding: 100px;
             margin-bottom: 0;
         }
+
+        .card {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -37,7 +41,7 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Venice Tourist Tax</a>
+        <a class="navbar-brand" href="booking.php">Venice Tourist Tax</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,16 +49,28 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="booking.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="nav-link" href="authenticate.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="User-List.html">User List</a>
+                    <a class="nav-link" href="booking.php">Bookings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Add-User.html">Add User</a>
+                    <a class="nav-link" href="User-List.php">User List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Add-User.php">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="payment-management.php">Payment Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reports.php">Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exemption.php">Exemptions</a>
                 </li>
             </ul>
         </div>
@@ -62,44 +78,29 @@
 
     <!-- Jumbotron - Welcome Section -->
     <div class="jumbotron">
-        <h1 class="display-4">Create Exemption</h1>
+        <h1 class="display-4" style="color: #fff;">Booking Management</h1>
+        <p class="lead" style="color: #fff;">Manage your reservations for Venice entry effectively.</p>
     </div>
 
-    <!-- Exemption Form Section -->
+    <!-- Booking Management Section -->
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <form>
-                    <div class="form-group">
-                        <label for="fullname">Full Name</label>
-                        <input type="text" class="form-control" id="fullname" placeholder="Enter your full name">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Create Booking</h5>
+                        <p class="card-text">Create a new reservation for Venice entry.</p>
+                        <a href="booking-add.php" class="btn btn-primary">Create Booking</a>
                     </div>
-                    <div class="form-group">
-                        <label for="nationality">Nationality</label>
-                        <input type="text" class="form-control" id="nationality" placeholder="Enter your nationality">
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Read Booking</h5>
+                        <p class="card-text">View existing reservations for Venice entry.</p>
+                        <a href="view-booking.php" class="btn btn-primary">View Bookings</a>
                     </div>
-                    <div class="form-group">
-                        <label for="passport">Passport Number</label>
-                        <input type="text" class="form-control" id="passport" placeholder="Enter your passport number">
-                    </div>
-                    <div class="form-group">
-                        <label for="photo">Photo of Passport</label>
-                        <input type="file" class="form-control-file" id="photo">
-                    </div>
-                    <div class="form-group">
-                        <label for="age">Age</label>
-                        <input type="number" class="form-control" id="age" placeholder="Enter your age">
-                    </div>
-                    <div class="form-group">
-                        <label for="gender">Gender</label>
-                        <select class="form-control" id="gender">
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                </div>
+                </div>
             </div>
         </div>
     </div>
@@ -112,3 +113,4 @@
 </body>
 
 </html>
+

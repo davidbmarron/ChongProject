@@ -41,21 +41,33 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Venice Tourist Tax</a>
+        <a class="navbar-brand" href="booking.php">Venice Tourist Tax</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="login.html">Login</a> <!-- Changed this to an anchor element -->
+                <li class="nav-item">
+                    <a class="nav-link" href="booking.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="User-List.html">User List</a>
+                    <a class="nav-link" href="authenticate.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Add-User.html">Add User</a>
+                    <a class="nav-link" href="booking.php">Bookings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="User-List.php">User List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Add-User.php">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="payment-management.php">Payment Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reports.php">Reports</a>
                 </li>
             </ul>
         </div>

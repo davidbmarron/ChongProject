@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Bookings - Venice Tourist Tax</title>
+    <title>Update Booking - Venice Tourist Tax</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -31,20 +31,12 @@
             margin-bottom: 0;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+        .form-group {
+            margin-bottom: 20px;
         }
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
+        .btn-primary {
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -53,7 +45,7 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Venice Tourist Tax</a>
+        <a class="navbar-brand" href="booking.php">Venice Tourist Tax</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -61,16 +53,25 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="booking.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="nav-link" href="authenticate.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="User-List.html">User List</a>
+                    <a class="nav-link" href="booking.php">Bookings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Add-User.html">Add User</a>
+                    <a class="nav-link" href="User-List.php">User List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Add-User.php">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="payment-management.php">Payment Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reports.php">Reports</a>
                 </li>
             </ul>
         </div>
@@ -78,34 +79,27 @@
 
     <!-- Jumbotron - Welcome Section -->
     <div class="jumbotron">
-        <h1 class="display-4">View Bookings</h1>
+        <h1 class="display-4">Update Booking</h1>
     </div>
 
-    <!-- View Bookings Table -->
+    <!-- Update Booking Form -->
     <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Date</th>
-                    <th>Number of Visitors</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Booking data will be dynamically inserted here -->
-                <tr>
-                    <td>John Doe</td>
-                    <td>2024-03-16</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Jane Smith</td>
-                    <td>2024-03-18</td>
-                    <td>3</td>
-                </tr>
-                <!-- Insert more rows for additional bookings -->
-            </tbody>
-        </table>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+            <div class="form-group">
+                <label for="visitors">Number of Visitors</label>
+                <input type="number" class="form-control" id="visitors" placeholder="Enter number of visitors">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a href="#" class="btn btn-secondary">Cancel</a>
+        </form>
     </div>
 
     <!-- Bootstrap JS and jQuery -->

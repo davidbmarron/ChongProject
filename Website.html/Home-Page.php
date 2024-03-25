@@ -34,6 +34,22 @@
         .card {
             margin-bottom: 20px;
         }
+
+        .card-deck {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .entry-rules,
+        .penalty {
+            margin-top: 30px;
+        }
+
+        .entry-rules ul,
+        .penalty ul {
+            font-size: 0.7em;
+        }
+        
     </style>
 </head>
 
@@ -41,24 +57,36 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Venice Tourist Tax</a>
+        <a class="navbar-brand" href="booking.php">Venice Tourist Tax</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="booking.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="nav-link" href="authenticate.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="User-List.html">User List</a>
+                    <a class="nav-link" href="booking.php">Bookings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Add-User.html">Add User</a>
+                    <a class="nav-link" href="User-List.php">User List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Add-User.php">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="payment-management.php">Payment Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reports.php">Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exemption.php">Exemptions</a>
                 </li>
             </ul>
         </div>
@@ -87,35 +115,37 @@
             </div>
         </div>
     </div>
-
+    <!-- Entry Rules Section -->
+    <div class="container entry-rules">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2>Venice Entry Rules</h2>
+                <p>Venice is a globally beautiful and dynamic city, attracting tourists from all over. However, this city
+                    is a treasure that requires special conservation measures. As such, the following Venice entry rules
+                    exist:</p>
+                <ul>
+                    <li>Advance Booking Required: Prior reservation of entry tickets is necessary before visiting Venice.
+                        This is to conserve the city's tourist attractions and cultural heritage, and to manage visitor
+                        numbers.</li>
+                    <li>Heritage Conservation: To preserve Venice's historic architecture and landmarks, visitors should
+                        take care not to damage heritage sites. They must adhere to legal restrictions and maintain proper
+                        conduct in public places.</li>
+                    <li>Respect for
     <!-- Cards Section -->
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Login</h5>
-                        <p class="card-text">Log in to access your account and manage tourist taxes.</p>
-                        <a href="login.html" class="btn btn-primary">Login</a>
-                    </div>
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Book Reservation</h5>
+                    <p class="card-text">Book your reservation now to explore Venice.</p>
+                    <a href="create-booking.html" class="btn btn-primary">Book Now</a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">User List</h5>
-                        <p class="card-text">View the list of registered users and their details.</p>
-                        <a href="User-List.html" class="btn btn-primary">View User List</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Add User</h5>
-                        <p class="card-text">Register a new user to manage their tourist taxes.</p>
-                        <a href="Add-User.html" class="btn btn-primary">Register User</a>
-                    </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">View Reservation</h5>
+                    <p class="card-text">View your existing reservations.</p>
+                    <a href="view-booking.html" class="btn btn-primary">View Reservations</a>
                 </div>
             </div>
         </div>

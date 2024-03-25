@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Management - Venice Tourist Tax</title>
+    <title>Payment Management - Venice Tourist Tax</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -41,7 +41,7 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Venice Tourist Tax</a>
+        <a class="navbar-brand" href="booking.php">Venice Tourist Tax</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,16 +49,28 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="booking.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="nav-link" href="authenticate.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="User-List.html">User List</a>
+                    <a class="nav-link" href="booking.php">Bookings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Add-User.html">Add User</a>
+                    <a class="nav-link" href="User-List.php">User List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Add-User.php">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="payment-management.php">Payment Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reports.php">Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exemption.php">Exemptions</a>
                 </li>
             </ul>
         </div>
@@ -66,40 +78,26 @@
 
     <!-- Jumbotron - Welcome Section -->
     <div class="jumbotron">
-        <h1 class="display-4" style="color: #fff;">Booking Management</h1>
-        <p class="lead" style="color: #fff;">Manage your reservations for Venice entry effectively.</p>
+        <h1 class="display-4" style="color: #fff;">Payment Management</h1>
+        <p class="lead" style="color: #fff;">Handle financial transactions related to entry fees efficiently.</p>
     </div>
 
-    <!-- Booking Management Section -->
+    <!-- Payment Management Section -->
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Create Booking</h5>
-                        <p class="card-text">Create a new reservation for Venice entry.</p>
-                        <a href="create-booking.html" class="btn btn-primary">Create Booking</a>
+                        <h5 class="card-title">Create Payment</h5>
+                        <p class="card-text">Record payments made by users for entry fees.</p>
+                        <a href="create-payment.php" class="btn btn-primary">Create Payment</a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Read Booking</h5>
-                        <p class="card-text">View existing reservations for Venice entry.</p>
-                        <a href="view-booking.html" class="btn btn-primary">View Bookings</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Update Booking</h5>
-                        <p class="card-text">Update an existing reservation for Venice entry.</p>
-                        <a href="update-booking.html" class="btn btn-primary">Update Booking</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Delete Booking</h5>
-                        <p class="card-text">Delete an existing reservation for Venice entry.</p>
-                        <a href="delete-booking.html" class="btn btn-primary">Delete Booking</a>
+                        <h5 class="card-title">Read Payment</h5>
+                        <p class="card-text">View payment details for reconciliation purposes.</p>
+                        <a href="view-payment.php" class="btn btn-primary">View Payment</a>
                     </div>
                 </div>
             </div>
@@ -110,8 +108,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
-
 </html>
-

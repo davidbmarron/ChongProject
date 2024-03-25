@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venice Tourist Tax Website</title>
+    <title>Delete Booking - Venice Tourist Tax</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -31,31 +31,46 @@
             margin-bottom: 0;
         }
 
-        .user-list-item {
-            margin-bottom: 10px;
+        .btn-primary {
+            margin-right: 10px;
         }
     </style>
 </head>
 
 <body>
 
-  <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Venice Tourist Tax</a>
+        <a class="navbar-brand" href="booking.php">Venice Tourist Tax</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="login.html">Login</a> <!-- Changed this to an anchor element -->
+                <li class="nav-item">
+                    <a class="nav-link" href="booking.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="User-List.html">User List</a>
+                    <a class="nav-link" href="authenticate.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Add-User.html">Add User</a>
+                    <a class="nav-link" href="booking.php">Bookings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="User-List.php">User List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Add-User.php">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="payment-management.php">Payment Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reports.php">Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exemption.php">Exemptions</a>
                 </li>
             </ul>
         </div>
@@ -63,34 +78,19 @@
 
     <!-- Jumbotron - Welcome Section -->
     <div class="jumbotron">
-        <h1 class="display-4" style="color: #fff;">Welcome to Venice Tourist Tax Website</h1>
-        <p class="lead" style="color: #fff;">Explore the beauty of Venice while managing tourist taxes efficiently.</p>
+        <h1 class="display-4">Delete Booking</h1>
     </div>
 
-
-    <!-- User List Page -->
-    <div id="user-list" class="container">
-        <h2>User List</h2>
-        <div class="list-group">
-            <div class="list-group-item">
-                <h5 class="mb-1"><a href='user-details.html'>Logan Kobliska</a></h5>
-                <p class="mb-1">Age: 21</p>
-                <p class="mb-1">Nationality: American</p>
-            </div>
-            <div class="list-group-item">
-                <h5 class="mb-1"><a href='user-details.hmtl'>Peter Lloyd</a></h5>
-                <p class="mb-1">Age: 20</p>
-                <p class="mb-1">Nationality: American</p>
-            </div>
-            <div class="list-group-item">
-               <h5 class="mb-1"><a href='user-details.html'>corigan campbell</a></h5>
-                <p class="mb-1">Age: 20</p>
-                <p class="mb-1">Nationality: American</p>
-            </div>
-        </div> 
-        <a href="Add-User.html" class="Add-User.html">Add User</a>
+    <!-- Delete Booking Confirmation -->
+    <div class="container">
+        <div class="alert alert-danger" role="alert">
+            Are you sure you want to delete this booking?
+        </div>
+        <form>
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a href="#" class="btn btn-secondary">Cancel</a>
+        </form>
     </div>
-
 
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

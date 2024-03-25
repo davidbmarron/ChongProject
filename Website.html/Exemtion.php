@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Payment - Venice Tourist Tax</title>
+    <title>Create Exemption - Venice Tourist Tax</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #fafafa;
+            background-color: #f8f9fa;
             font-family: 'Arial', sans-serif;
             color: #333; /* Text color */
         }
@@ -31,8 +31,24 @@
             margin-bottom: 0;
         }
 
-        .card {
-            margin-bottom: 20px;
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
         }
     </style>
 </head>
@@ -41,7 +57,7 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Venice Tourist Tax</a>
+        <a class="navbar-brand" href="booking.php">Venice Tourist Tax</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,19 +65,28 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="booking.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="nav-link" href="authenticate.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="User-List.html">User List</a>
+                    <a class="nav-link" href="booking.php">Bookings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Add-User.html">Add User</a>
+                    <a class="nav-link" href="User-List.php">User List</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="payment-management.html">Payment Management</a>
+                    <a class="nav-link" href="Add-User.php">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="payment-management.php">Payment Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Reports.php">Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exemption.php">Exemptions</a>
                 </li>
             </ul>
         </div>
@@ -69,21 +94,22 @@
 
     <!-- Jumbotron - Welcome Section -->
     <div class="jumbotron">
-        <h1 class="display-4" style="color: #fff;">View Payment</h1>
-        <p class="lead" style="color: #fff;">View payment details for reconciliation purposes.</p>
+        <h1 class="display-4">Create Exemption</h1>
     </div>
 
-    <!-- View Payment Section -->
+    <!-- Exemption Form Section -->
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Payment Details</h5>
-                        <p class="card-text">Payment ID: <span id="payment-id">12345</span></p>
-                        <p class="card-text">Amount: <span id="payment-amount">$50.00</span></p>
-                        <p class="card-text">Date: <span id="payment-date">2024-03-15</span></p>
-                        <p class="card-text">Status: <span id="payment-status">Processed</span></p>
+                        <h5 class="card-title">Exemption Actions</h5>
+                        <div class="list-group">
+                            <a href="create_exemption.php" class="list-group-item list-group-item-action">Create Exemption</a>
+                            <a href="view-exemptions.php" class="list-group-item list-group-item-action">View Exemptions</a>
+                            <a href="update-exemption.php" class="list-group-item list-group-item-action">Update Exemption</a>
+                            <a href="delete-exemption.php" class="list-group-item list-group-item-action">Delete Exemption</a>
+                        </div>
                     </div>
                 </div>
             </div>
