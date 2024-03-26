@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username']) && isset($
         $_SESSION['user'] = $user;
 
         header("Location: booking.php");
-        exit(); // Make sure to exit after redirecting
+        //exit(); // Make sure to exit after redirecting
     } else {
         echo "login error<br>";
     }
